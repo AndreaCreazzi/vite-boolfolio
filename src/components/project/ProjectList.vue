@@ -7,7 +7,7 @@ export default {
 </script>
 <template>
     <section id="project-list">
-        <h2>Il miei Progetti</h2>
+        <h1 class="py-4">Progetti</h1>
         <div v-if="projects.length">
             <ProjectCard v-for="project in projects" :key="project.id" :project="project" />
         </div>

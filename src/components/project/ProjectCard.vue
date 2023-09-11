@@ -21,7 +21,7 @@ export default {
 <template>
     <div class="card my-3">
         <div class="card-header">
-            <h1>{{ project.title }}</h1>
+            <h3>{{ project.title }}</h3>
         </div>
         <div class="card-body">
             <p>{{ project.description }}</p>
