@@ -1,27 +1,15 @@
 <script>
-import axios from 'axios';
-const endpoint = 'http://127.0.0.1:8000/api/projects';
+import AppHome from './pages/AppHome.vue';
+import ProjectShow from './pages/ProjectShow.vue'
 import Appheader from './components/Appheader.vue';
-import ProjectList from './components/project/ProjectList.vue';
 export default {
-  components: { Appheader, ProjectList },
-  data: () => ({ projects: [] }),
-  methods: {
-    fetchProject() {
-      axios.get(endpoint).then(res => { this.projects = res.data })
-    }
-  },
-  created() {
-    this.fetchProject()
-  }
+  components: { Appheader, AppHome, ProjectShow },
 };
 </script>
 
 <template>
   <Appheader />
-  <main class="container my-3">
-    <ProjectList :projects="projects" />
-  </main>
+  <RouterView />
 </template>
 
 <style scoped></style>
