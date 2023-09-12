@@ -17,7 +17,7 @@ export default {
 </script>
 
 <template>
-    <main class="container my-3">
+    <main class="container">
         <ProjectList :projects="projects" />
     </main>
 </template>

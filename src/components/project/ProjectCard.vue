@@ -1,6 +1,9 @@
 <script>
 export default {
-    props: { project: Object },
+    props: {
+        project: Object,
+        isDetail: Boolean
+    },
     computed: {
         projectDate() {
             const date = new Date(this.project.created_at);
@@ -20,8 +23,11 @@ export default {
 </script>
 <template>
     <div class="card my-3">
-        <div class="card-header">
+        <div class="card-header d-flex justify-content-between align-items-center">
             <h3>{{ project.title }}</h3>
+            <router-link v-if="!isDetail" :to="{ name: 'project-details', params: { id: project.id } }"
+                class="btn btn-primary">Guarda</router-link>
+            <router-link v-else :to="{ name: 'home' }" class="btn btn-primary">Torna indietro</router-link>
         </div>
         <div class="card-body">
             <p>{{ project.description }}</p>
