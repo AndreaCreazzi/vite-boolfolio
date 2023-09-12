@@ -1,9 +1,7 @@
 <script>
-import AppHome from './pages/AppHome.vue';
-import ProjectShow from './pages/ProjectShow.vue'
 import Appheader from './components/Appheader.vue';
 export default {
-  components: { Appheader, AppHome, ProjectShow },
+  components: { Appheader },
 };
 </script>
 
